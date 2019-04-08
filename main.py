@@ -69,7 +69,7 @@ def sell():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--port', default=50000)
+    parser.add_argument('--port', default=50000, type=int)
     args = parser.parse_args()
 
     app.run('::', args.port, debug=True, threaded=True)
